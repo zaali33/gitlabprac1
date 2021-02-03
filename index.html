@@ -7,7 +7,14 @@
 </head>
 <body>
     <h1>Add students to the list</h1>
+    <div id="students-list"></div>
     <input type="text" id="student-name" name="student-name"/>
-    <button>Add</button>
+    <button onclick="addStudent()">Add</button>
 </body>
 </html>
+<script>
+    function addStudent() {
+        let sname = document.getElementById("student-name").value
+        document.getElementById("students-list").innerHTML += `<li>${sname}</li>`
+    }
+</script>
